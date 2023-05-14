@@ -2,8 +2,8 @@ version: '3'
 services: 
     web:
         build: .
-        command: python3 app/app.py
         volumes:
             - ./app:/app
         ports:
             - 5000:5000
+        command: flask run --host=0.0.0.0 --debug
